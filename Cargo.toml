@@ -1,0 +1,25 @@
+[package]
+name = "aoc2024"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+criterion = "0.5.1"
+rand = "0.8.5"
+regex = "1.11.1"
+
+[[bin]]
+name = "day01"
+path = "src/bin/day01/main.rs"
+
+[[bin]]
+name = "day02"
+path = "src/bin/day02/main.rs"
+
+[[bin]]
+name = "day03"
+path = "src/bin/day03/main.rs"
+
+[[bench]]
+name = "day01"
+harness = false

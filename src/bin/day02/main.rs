@@ -14,7 +14,7 @@ fn main() -> io::Result<()> {
         buffer.clear();
     }
 
-    println!("{}", day02::task1(&reports));
-    println!("{}", day02::task2(&reports));
+    println!("{}", aoc2024::day02::task1(&reports));
+    println!("{}", aoc2024::day02::task2(&reports));
     Ok(())
 }

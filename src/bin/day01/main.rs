@@ -15,6 +15,6 @@ fn main() -> io::Result<()> {
         buffer.clear();
     }
 
-    println!("{}", day01::task2_fastest(&mut items1, &mut items2));
+    println!("{}", aoc2024::day01::task2_fastest(&mut items1, &mut items2));
     Ok(())
 }

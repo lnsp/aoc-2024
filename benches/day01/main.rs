@@ -11,17 +11,17 @@ fn bench_task2(c: &mut Criterion) {
 
     c.bench_function("bench_task2", |b| {
         b.iter(|| {
-            std::hint::black_box(day01::task2(&mut items1, &mut items2));
+            std::hint::black_box(aoc2024::day01::task2(&mut items1, &mut items2));
         });
     });
     c.bench_function("bench_task2_faster", |b| {
         b.iter(|| {
-            std::hint::black_box(day01::task2_faster(&mut items1, &mut items2));
+            std::hint::black_box(aoc2024::day01::task2_faster(&mut items1, &mut items2));
         });
     });
     c.bench_function("bench_task2_fastest", |b| {
         b.iter(|| {
-            std::hint::black_box(day01::task2_fastest(&mut items1, &mut items2));
+            std::hint::black_box(aoc2024::day01::task2_fastest(&mut items1, &mut items2));
         });
     });
 }
