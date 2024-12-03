@@ -21,14 +21,14 @@ pub fn task2(items1: &mut Vec<i32>, items2: &mut Vec<i32>) -> i32 {
 
 pub fn task2_faster(items1: &mut Vec<i32>, items2: &mut Vec<i32>) -> i32 {
     for value in items1.iter_mut() {
-        *value = *value * (items2.iter().filter(|v| {*v ==value}).count() as i32)
+        *value = *value * (items2.iter().filter(|v| *v == value).count() as i32)
     }
     items1.iter().sum()
 }
 
 fn reduce_to_count(items: &mut Vec<i32>) -> Vec<(i32, i32)> {
     items.sort();
-    items.iter().fold(Vec::new(), | mut v, i| {
+    items.iter().fold(Vec::new(), |mut v, i| {
         match v.last_mut() {
             Some((last_value, last_freq)) => {
                 if last_value == i {
@@ -36,7 +36,7 @@ fn reduce_to_count(items: &mut Vec<i32>) -> Vec<(i32, i32)> {
                 } else {
                     v.push((*i, 1));
                 }
-            },
+            }
             None => {
                 v.push((*i, 1));
             }
