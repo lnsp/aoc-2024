@@ -5,6 +5,7 @@ edition = "2024"
 
 [dependencies]
 criterion = "0.5.1"
+itertools = "0.13.0"
 rand = "0.8.5"
 regex = "1.11.1"
 strum = "0.26.3"
