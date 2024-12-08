@@ -5,23 +5,12 @@ edition = "2024"
 
 [dependencies]
 criterion = "0.5.1"
+gcd = "2.3.0"
 itertools = "0.13.0"
 rand = "0.8.5"
 regex = "1.11.1"
 strum = "0.26.3"
 strum_macros = "0.26.4"
-
-[[bin]]
-name = "day01"
-path = "src/bin/day01/main.rs"
-
-[[bin]]
-name = "day02"
-path = "src/bin/day02/main.rs"
-
-[[bin]]
-name = "day03"
-path = "src/bin/day03/main.rs"
 
 [[bench]]
 name = "day01"
