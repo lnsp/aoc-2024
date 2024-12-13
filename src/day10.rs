@@ -1,6 +1,9 @@
 use std::collections::{HashMap, LinkedList};
 
-enum Direction {
+use strum_macros::EnumIter;
+
+#[derive(Debug, EnumIter, Hash, PartialEq, Eq)]
+pub enum Direction {
     Up,
     Down,
     Left,
@@ -8,7 +11,15 @@ enum Direction {
 }
 
 impl Direction {
-    fn follow(&self, current: (usize, usize), bounds: (usize, usize)) -> Option<(usize, usize)> {
+    pub fn turn(&self) -> Direction {
+        match self {
+            Direction::Up => Direction::Right,
+            Direction::Right => Direction::Down,
+            Direction::Down => Direction::Left,
+            Direction::Left => Direction::Up,
+        }
+    }
+    pub fn follow(&self, current: (usize, usize), bounds: (usize, usize)) -> Option<(usize, usize)> {
         if match self {
             Direction::Up => current.0 > 0,
             Direction::Down => current.0 < bounds.0 - 1,
