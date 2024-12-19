@@ -5,9 +5,12 @@ edition = "2024"
 
 [dependencies]
 criterion = "0.5.1"
+fraction = "0.15.3"
 gcd = "2.3.0"
 itertools = "0.13.0"
+num = "0.4.3"
 rand = "0.8.5"
+rayon = "1.10.0"
 regex = "1.11.1"
 strum = "0.26.3"
 strum_macros = "0.26.4"
